@@ -11,6 +11,7 @@ import CategoryRegion from "./Product/CategoryRegionReducer";
 import ProductLockReducer from "./Product/ProductLockReducer";
 import CreateNewProductReducer from "./Product/CreateNewProductReducer";
 import ProductBrandsReducer from "./Product/ProductBrandsReducer";
+import SubCategoryIdReducer from "./Product/SubCategoryIdReducer";
 const reducer = combineReducers({
   user: user,
   auth: AuthReducer,
@@ -24,6 +25,7 @@ const reducer = combineReducers({
   productLock: ProductLockReducer,
   newProduct: CreateNewProductReducer,
   brands: ProductBrandsReducer,
+  subCategory: SubCategoryIdReducer,
 });
 
 export default reducer;

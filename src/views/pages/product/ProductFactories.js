@@ -5,12 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../../redux/action/Product/CreateNewProductAction";
 import LoadingForCreateProduct from "../../elements/loadingForCreateProduct";
 import { brands } from "../../../redux/action/Product/ProductBrandsAction";
-
+import { subCategory } from "../../../redux/action/Product/SubCategoryIDAction";
 const ProductFactories = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(brands());
+    dispatch(subCategory());
   }, []);
 
   const [value, setValue] = useState([]);
@@ -18,6 +19,7 @@ const ProductFactories = () => {
   const [counterThree, setCounterThree] = useState(0);
   const [counter, setCounter] = useState(0);
 
+  const { subCategoryList } = useSelector((state) => state.subCategory);
   const { brandsList } = useSelector((state) => state.brands);
   const convertBase64 = (file, element) => {
     const fileReader = new FileReader();
@@ -81,11 +83,9 @@ const ProductFactories = () => {
   const [properties_data, setPropertiesData] = useState("");
   const [photo, setPhoto] = useState("");
   const [stock_id, setStockId] = useState("");
-
-  console.log(photo);
-
   const label = { inputProps: { "aria-label": "Switch demo" } };
   const { loading } = useSelector((state) => state.newProduct);
+
   return (
     <div className="wrapper">
       <div className="factory-card">

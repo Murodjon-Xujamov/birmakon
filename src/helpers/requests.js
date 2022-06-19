@@ -53,5 +53,7 @@ const requests = {
   addProduct: (params) =>
     axios.post(`${url}/dashboard/product/create`, packageData(params), config),
   brands: () => axios.get(`${url}/dashboard/brand`, config),
+  subCategory: (id) =>
+    axios.get(`${url}/dashboard/category/sub-category?id=${id}`, config),
 };
 export default requests;
