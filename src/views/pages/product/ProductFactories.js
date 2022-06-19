@@ -6,12 +6,12 @@ import { addProduct } from "../../../redux/action/Product/CreateNewProductAction
 import LoadingForCreateProduct from "../../elements/loadingForCreateProduct";
 import { brands } from "../../../redux/action/Product/ProductBrandsAction";
 import { subCategory } from "../../../redux/action/Product/SubCategoryIDAction";
+
 const ProductFactories = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(brands());
-    dispatch(subCategory());
   }, []);
 
   const [value, setValue] = useState([]);
@@ -19,7 +19,6 @@ const ProductFactories = () => {
   const [counterThree, setCounterThree] = useState(0);
   const [counter, setCounter] = useState(0);
 
-  const { subCategoryList } = useSelector((state) => state.subCategory);
   const { brandsList } = useSelector((state) => state.brands);
   const convertBase64 = (file, element) => {
     const fileReader = new FileReader();
@@ -83,8 +82,12 @@ const ProductFactories = () => {
   const [properties_data, setPropertiesData] = useState("");
   const [photo, setPhoto] = useState("");
   const [stock_id, setStockId] = useState("");
+
   const label = { inputProps: { "aria-label": "Switch demo" } };
   const { loading } = useSelector((state) => state.newProduct);
+  const subCategoryList = useSelector(
+    (state) => state.subCategory.subCategoryList
+  );
 
   return (
     <div className="wrapper">
@@ -160,7 +163,12 @@ const ProductFactories = () => {
           <div className="grid-item">
             <div className="select">
               <div className="select__title bold color">Категория</div>
-              <select onChange={(e) => setCategoryId(e.target.value)}>
+              <select
+                onChange={(e) => {
+                  setCategoryId(e.target.value);
+                  dispatch(subCategory(e.target.value));
+                }}
+              >
                 {categoryItem.map((item) => (
                   <option value={item.id}>{item.name}</option>
                 ))}
@@ -236,9 +244,11 @@ const ProductFactories = () => {
             <div className="select">
               <div className="select__title bold color">Ед изменения</div>
               <select>
-                <option value="">Ед изменения</option>
-                <option value="">Ед изменения</option>
-                <option value="">Ед изменения</option>
+                {subCategoryList.map((item, idx) => (
+                  <option value={item.id} key={idx}>
+                    {item.name}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="currency">
