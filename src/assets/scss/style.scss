@@ -1,0 +1,229 @@
+.wrapper{
+  box-shadow: 0px 2px 10px rgb(0 0 0 / 15%);
+  margin: 2.5rem 5rem 2.5rem 2rem;
+  padding: 1.5rem 1.5rem 4rem 1.5rem;
+  .main-title{
+    font-size: 36px;
+    color: #023047;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  .my-4{
+    margin: 3rem 0;
+  }
+  .mr-4{
+    margin-right: 2rem;
+  }
+  .message__title{
+    font-size: 42px;
+    color: #023047;
+  }
+  .message{
+    background: #F8F8FA;
+    border-radius: 0px;
+    height: 480px;
+    overflow-y: scroll;
+  }
+  .message::-webkit-scrollbar {
+    display: none;
+  }
+  .message__title{
+    color: #D9D9D9;
+    background: #131E3D;
+    font-size: 23px;
+    padding: 1.5rem 1.5rem 1.5rem 3rem;
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  .message p{
+    color: #023047;
+    background: rgba(212, 212, 212, 0.5);
+    border-radius: 12px 12px 12px 0px;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    width: 70%;
+    font-size: 18px;
+  }
+  .message .admin__text{
+    color: #023047;
+    background: rgba(212, 212, 212, 0.5);
+    border-radius: 12px 12px 0px 12px;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    width: 70%;
+    font-size: 18px;
+    margin-left: auto;
+  }
+  .message__shadow {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 8px ;
+  }
+  .send{
+    background: #F8F8FA;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px 8px 8px;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .file-upload{
+    position: relative;
+    width: 20px;
+  }
+  .file-upload input{
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .send form{
+    display: flex;
+    width: 90%;
+    padding: 1rem 2rem;
+    border-radius: 0px 0px 8px 8px;
+    background: rgba(217, 217, 217, 0.5);
+  }
+  .send form img{
+    margin-right: 1rem;
+  }
+  .send form input{
+    background: transparent;
+    color: #898989;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    border: none;
+  }
+  .send form input::placeholder{
+    color: #898989;
+  }
+  .send .send__icon{
+    border-radius: 50%;
+    background: rgba(217, 217, 217, 0.5);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    object-fit: none;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1025px){
+  .send form{
+      width: 91%;
+  }
+  .message p, .message .admin__text{
+      width: 70%;
+  }
+}
+@media (min-width: 600px) and (max-width: 769px){
+  .send form{
+      width: 88%;
+  }
+  .message p, .message .admin__text{
+      padding: 1rem;
+      font-size: 14px;
+      width: 80%;
+  }
+  .title {
+      font-size: 20px;
+      padding-left: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .send form input {
+      font-size: 14px;
+  }
+  .main-title{
+      font-size: 24px;
+  }
+}
+@media (min-width: 415px) and (max-width: 600px){
+  .send form{
+      padding: 0.8rem 1rem;
+      width: 85%;
+  }
+  .title{
+      padding: 1rem 1rem 1rem 2rem;
+  }
+  .message__title {
+      font-size: 28px;
+      margin-bottom: 1rem;
+  }
+  .send .send__icon{
+      height: 45px;
+  }
+  .message p, .message .admin__text{
+      width: 60%;
+      padding: 1rem;
+      font-size: 14px;
+  }
+  .title {
+      font-size: 20px;
+      padding-left: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .send form input {
+      font-size: 14px;
+  }
+  .main-title{
+      font-size: 20px;
+  }
+}
+@media (max-width: 415px){
+  .message__title{
+      padding: 10px;
+      font-size: 16px;
+  }
+  .send{
+      padding: 0.5rem;
+  }
+  .send .send__icon{
+      border-radius: unset;
+      background: none;
+      box-shadow: unset;
+      margin: auto;
+      width: auto;
+      height: auto;
+      padding: 0;
+      cursor: pointer;
+  }
+  .send form{
+      padding: 0.7rem 1rem;
+      width: 80%;
+  }
+  .message p, .message .admin__text{
+      width: 75%;
+      padding: 10px;
+      font-size: 14px;
+  }
+  .message__title {
+      font-size: 22px;
+  }
+  .send form input {
+      font-size: 14px;
+  }
+  .main-title{
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 300px){
+  .message p, .message .admin__text{
+      margin: 0.5rem;
+      width: 80%;
+      font-size: 14px;
+  }
+  .send .send__icon{
+      height: 40px;
+  }
+  .send form input {
+      font-size: 14px;
+  }
+}

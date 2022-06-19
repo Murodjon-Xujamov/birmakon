@@ -1,0 +1,62 @@
+.default_layout_row {
+  width: 100%;
+  display: flex;
+  .wrapper_column {
+    margin-left: 300px;
+    width: 100%;
+    transition: 0.2 linear;
+    @media only screen and (max-width: 992px) {
+      margin-left: auto;
+      transition: 0.2 linear;
+    }
+  }
+}
+
+._sidebar {
+  ._logo {
+    text-align: center;
+    color: #fff;
+    margin-top: 5px;
+  }
+}
+
+.header {
+  .header_bars {
+    margin-left: 10px;
+    @media only screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+  .header_bars_mobile {
+    margin-left: 10px;
+    @media only screen and (min-width: 992px) {
+      display: none;
+    }
+  }
+  .header_notification {
+    margin-right: 80px;
+    display: flex;
+    align-items: center;
+    ._language {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      span {
+        font-size: 14px;
+        margin-left: 10px;
+      }
+    }
+    img {
+      width: 28px;
+      margin-left: 40px;
+    }
+  }
+}
+
+.activeNav {
+  background: linear-gradient(
+    90deg,
+    rgba(52, 54, 115, 0.7) 0%,
+    rgba(65, 115, 242, 0.7) 50%
+  );
+}

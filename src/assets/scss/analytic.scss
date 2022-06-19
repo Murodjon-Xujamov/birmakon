@@ -1,0 +1,210 @@
+.wrapper{
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 15%);
+    margin: 2.5rem 5rem 2.5rem 2rem;
+    padding: 1.5rem 1.5rem 4rem 1.5rem;
+    .analytic__boxes{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .analytic__boxes .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+        width: 300px;
+        border-radius: 16px;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0px 15px 30px rgba(172, 160, 160, 0.15);
+    }
+    .analytic__boxes .box *{
+        color: #fff;
+        font-size: 16px;
+    }
+    .yellow{
+        background: #FFBB34;
+    }
+    .blue{
+        background: #00D2D3;
+    }
+    .purple{
+        background: #C211A7;
+    }
+    .myChart{
+        background: #FDFDFF;
+        border: 1px solid #EBEBEB;
+        box-sizing: border-box;
+        border-radius: 13px;
+        margin: 3rem 0;
+        padding: 3rem;
+    }
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .ml-auto{
+        margin-left: auto;
+        margin-right: 3rem;
+    }
+    .flex select{
+        border: none;
+        outline: none;
+        color: #4F4F4F;
+    }
+    svg.radial-progress {
+        height: auto;
+        max-width: 100px;
+        margin: 0.5rem 0;
+        transform: rotate(-90deg);
+    }
+    svg.radial-progress circle {
+    fill: rgba(0,0,0,0);
+    stroke: #fff;
+    stroke-dashoffset: 219.91148575129; 
+    stroke-width: 3;
+    }
+    
+    
+    svg.radial-progress circle.incomplete { opacity: 0.25; }
+    svg.radial-progress circle.complete { stroke-dasharray: 219.91148575129; }
+    svg.radial-progress text {
+    fill: #fff;
+    text-anchor: middle;
+    }
+    .table{
+        overflow-x: scroll;
+        width: 1040px;
+    }
+    table{
+        border-spacing: 0;
+    }
+    table tr th{
+        text-align: left;
+        color: #999999;
+        font-size: 14px;
+        padding: 16px;
+        font-weight: 100;
+        white-space: nowrap;
+    }
+    table tr td{
+        background: rgba(238, 73, 39, 0.5);
+        color: #023047;
+        padding: 16px;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+    table tr td:first-child{
+        border-radius: 8px 0 0 8px;
+    }
+    table tr td:last-child{
+        border-radius: 0 8px 8px 0;
+        color: #D9D9D9;
+        background: #313131;
+    }
+    .total__products{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 2rem;
+    }
+    .total__products .counter{
+        border: 1px solid #9D9D9D;
+        box-sizing: border-box;
+        padding: 5px;
+        color: #9D9D9D;
+        width: 50px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        height: 42px;
+        text-align: center;
+        font-size: 16px;
+        outline: none;
+        border-radius: 5px;
+    }
+    .total__products select{
+        width: max-content !important;
+    }
+}
+
+@media (min-width: 1800px){
+    .table{
+        width: 1400px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1480px){
+    .table{
+        width: 895px;
+    }
+}
+@media (max-width: 1024px){
+    .table{
+        width: 100%;
+    }
+    .myChart{
+        padding: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1025px){
+    .analytic__boxes .box{
+        width: 282px;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+}
+@media (min-width: 415px) and (max-width: 600px){
+    .analytic__boxes{
+        justify-content: space-between;
+    }
+    .analytic__boxes .box{
+        width: 49%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .analytic__boxes .box *{
+        font-size: 14px;
+    }
+    .flex{
+        margin-bottom: 1.5rem;
+    }
+    .myChart .title{
+        width: 100%;
+    }
+    .ml-auto{
+        margin-left: unset;
+        margin-right: 0;
+    }
+}
+@media (max-width: 415px){
+    .analytic__boxes{
+        justify-content: space-between;
+    }
+    .analytic__boxes .box{
+        width: 49%;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        padding: 10px 5px;
+    }
+    .analytic__boxes .box *{
+        font-size: 10px;
+        text-align: center;
+    }
+    svg.radial-progress{
+        max-width: 60px;
+    }
+    svg.radial-progress text{
+        font-size: 18px !important;
+    }
+    .flex{
+        margin-bottom: 1.5rem;
+    }
+    .myChart .title{
+        width: 100%;
+    }
+    .ml-auto{
+        margin-left: unset;
+        margin-right: 0;
+    }
+}
